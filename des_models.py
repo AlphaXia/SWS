@@ -10,8 +10,7 @@ from timm.models.layers import trunc_normal_
 __all__ = [
     'deit_tiny_distilled_patch16_224', 'deit_small_distilled_patch16_224','deit_base_distilled_patch16_224', 
     'deit_base_patch16_384', 'deit_base_distilled_patch16_384',
-    'deit_small_patch16_224_L6', 'deit_small_patch16_224_L7', 'deit_small_patch16_224_L8','deit_small_patch16_224_L9', 'deit_small_patch16_224_L10','deit_small_patch16_224_L11','deit_small_patch16_224_L12', 'deit_small_patch16_224_L13', 'deit_small_patch16_224_L14', 'deit_small_patch16_224_L15', 
-    'deit_base_patch16_224_L6', 'deit_base_patch16_224_L7', 'deit_base_patch16_224_L8', 'deit_base_patch16_224_L9', 'deit_base_patch16_224_L10', 'deit_base_patch16_224_L11', 'deit_base_patch16_224_L12', 'deit_base_patch16_224_L13', 'deit_base_patch16_224_L14', 'deit_base_patch16_224_L15',
+    'deit_small_patch16_224_L12', 'deit_base_patch16_224_L12'
 ]
 
 
@@ -133,181 +132,15 @@ def deit_base_distilled_patch16_384(pretrained=False, pretrained_cfg=None, **kwa
     return model
 
 
-@register_model
-def deit_small_patch16_224_L6(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 6
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=6, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L7(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 7
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=7, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L8(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 8
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=8, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L9(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 9
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=9, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L10(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 10
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=10, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L11(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 11
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=11, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
 
 @register_model
 def deit_small_patch16_224_L12(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 12
     model = VisionTransformer(
         patch_size=16, embed_dim=384, depth=12, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
     model.default_cfg = _cfg()
     assert not pretrained
     
     return model
-
-
-
-@register_model
-def deit_small_patch16_224_L13(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 12
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=13, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-
-@register_model
-def deit_small_patch16_224_L14(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 12
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=14, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_small_patch16_224_L15(pretrained=False, pretrained_cfg=None, **kwargs):
-    # depth 12 -> 12
-    model = VisionTransformer(
-        patch_size=16, embed_dim=384, depth=15, num_heads=6, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    assert not pretrained
-    
-    return model
-
-
-@register_model
-def deit_base_patch16_224_L6(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=6, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
-
-
-
-@register_model
-def deit_base_patch16_224_L7(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=7, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    
-    return model
-
-
-@register_model
-def deit_base_patch16_224_L8(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=8, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    
-    return model
-
-
-
-@register_model
-def deit_base_patch16_224_L9(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=9, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-    
-    return model
-
-
-
-@register_model
-def deit_base_patch16_224_L10(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=10, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
-
-
-
-@register_model
-def deit_base_patch16_224_L11(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=11, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
-
 
 
 @register_model
@@ -320,33 +153,3 @@ def deit_base_patch16_224_L12(pretrained=False, pretrained_cfg=None, **kwargs):
     return model
 
 
-
-@register_model
-def deit_base_patch16_224_L13(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=13, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
-
-
-
-@register_model
-def deit_base_patch16_224_L14(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=14, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
-
-
-@register_model
-def deit_base_patch16_224_L15(pretrained=False, pretrained_cfg=None, **kwargs):
-    model = VisionTransformer(
-        patch_size=16, embed_dim=768, depth=15, num_heads=12, mlp_ratio=4, qkv_bias=True, global_pool='avg', class_token=False,
-        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    model.default_cfg = _cfg()
-
-    return model
